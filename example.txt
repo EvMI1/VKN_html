@@ -1,0 +1,17 @@
+Program ex;
+var x0, x, y: real; 
+      eps: real;
+      i: integer;
+begin
+x := 10; y := 10;
+read(eps);
+i = 1;
+while abs(x – y) >= eps do
+begin
+		x0 := x;
+		x := 0.1 * y;
+		y := 0.1 * x – 0.12 * y;
+		i := i + 1;
+end
+write(i);
+end

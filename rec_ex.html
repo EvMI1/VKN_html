@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задачи рекурсия</title>
+</head>
+<body  background-image: background="back.png"
+ackground-repeat: no-repeat;
+background-size: cover;>
+    <font size = 5.5 face = "Times New Roman">
+    <a href = index.html> <img src = "1005141.png" align = left width="75" height="75 alt="Главная страница"></a>
+    <center><h1>Задачи с рекурсивными вычислениями</h1></center>
+    <br>
+    <h2>Задача "вывод перевернуйтой строки"</h2>
+    <p>Условие:</p>
+    <p>Пользователь вводит последовательность символов до символа «*». Вывести последовательность в обратном порядке.</p>
+    <p>Решение на языке С</p>
+    <pre>
+        <code>
+void print()
+{
+	char s;
+	 scanf("%s", &s);
+	if (s != '*')
+	print();
+	printf("%s", s);
+}
+        </code>
+    </pre>
+    <br>
+    <h2>Задача "Кривая Гильберта"</h2>
+    <img src="krivaya.jpg" alt = "Кривая">
+    <p>Условие:</p>
+    <p>Задается величина n, которая говорит какого порядка кривую нужно сформировать.
+        Задается основание h. 
+        Задаются координаты точки x, y, с которой происходит построение этой кривой.
+        Положение кривой (a, b, c, d).
+    </p>
+    <p>Решение на языке Pascal</p>
+    <pre>
+        <code>
+procedure line(x, y) // должна провести линию из точки, которая считается текущей в графической системе в новую точку с заданными координатами x, y
+procedure A(n:integer)
+begin
+        if(n > 0)
+          then begin
+                D(n-1);
+                x := x – h;
+                line(x, y);
+                A(n-1);
+                y := y + h;
+                line (x, y);
+                A(n-1);
+                x := x + h;
+                line(x, y);
+                B(n-1);
+             end
+end
+        </code>
+    </pre>
+    </font>
